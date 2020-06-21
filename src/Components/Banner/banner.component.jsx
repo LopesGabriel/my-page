@@ -5,7 +5,8 @@ import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free
 import Gabriel from '../../assets/img/Gabriel.png';
 import './banner.style.css';
 
-const Banner = (props) => {
+const Banner = ({ dados}) => {
+    const { banner: { title, subtitle, socialDescription } } = dados;
     return(
         <Container className="banner-root" fluid>
             <Row>
@@ -13,24 +14,24 @@ const Banner = (props) => {
                     <div className="banner-image-container">
                         <Image src={Gabriel} className="banner-image shadow" roundedCircle />
                     </div>
-                    <h1 className="banner-title">Gabriel de Oliveira Lopes</h1>
-                    <h4 className="banner-subtitle">Desenvolver é arte e eu faço parte</h4>
+                    <h1 className="banner-title">{title}</h1>
+                    <h4 className="banner-subtitle">{subtitle}</h4>
                     <div style={{marginTop: 20}}>
                         <div className="banner-social-media-container">
-                            <a href="https://www.linkedin.com/in/gabriel-de-oliveira-lopes-b97093179/" target="_blank">
+                            <a href="https://www.linkedin.com/in/gabriel-de-oliveira-lopes-b97093179/" target="_blank" className="social-link" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faLinkedin} size="2x" style={{color: '#0e76a8'}} />
                             </a>
-                            <a href="https://github.com/LopesGabriel" target="_blank" className="social-link">
+                            <a href="https://github.com/LopesGabriel" target="_blank" className="social-link" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGithub} size="2x" style={{color: 'black'}} />
                             </a>
-                            <a href="https://www.instagram.com/gabriel.310/" target="_blank" title="@gabriel.310" className="social-link">
+                            <a href="https://www.instagram.com/gabriel.310/" target="_blank" title="@gabriel.310" className="social-link" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faInstagram} size="2x" className="insta-icon" style={{color: 'white'}} />
                             </a>
-                            <a href="https://www.facebook.com/gabriel.oliveiralopes.98" target="_blank" className="social-link">
+                            <a href="https://www.facebook.com/gabriel.oliveiralopes.98" target="_blank" className="social-link" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faFacebook} size="2x" style={{color: '#4267B2'}} />
                             </a>
                         </div>
-                        <p style={{margin: 0}}>Onde me encontrar</p>
+                        <p style={{margin: 0}}>{socialDescription}</p>
                     </div>
                 </Col>
             </Row>
