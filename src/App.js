@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from './Components/Header/header.component';
 import Banner from './Components/Banner/banner.component';
+import About from './Components/About/about.component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Container } from 'react-bootstrap';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
@@ -35,6 +36,7 @@ function App() {
       <div className="App">
         <Header />
         <Banner dados={pageData} />
+        <About />
       </div>
     );
 }

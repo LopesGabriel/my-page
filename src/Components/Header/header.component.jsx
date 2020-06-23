@@ -5,7 +5,7 @@ import './header.style.css';
 
 const Header = () => {
     return(
-        <Navbar bg="dark" expand="lg">
+        <Navbar className="header-root" bg="dark" expand="lg">
             <Navbar.Brand style={{color: 'white', fontWeight: 'bold'}} href="#home">Dev Lopes</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
