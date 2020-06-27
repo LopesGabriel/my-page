@@ -5,8 +5,7 @@ import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free
 import Gabriel from '../../assets/img/Gabriel.png';
 import './banner.style.css';
 
-const Banner = ({ dados}) => {
-    const { banner: { title, subtitle, socialDescription } } = dados;
+const Banner = () => {
     return(
         <Container className="banner-root" fluid>
             <Row>
@@ -14,8 +13,8 @@ const Banner = ({ dados}) => {
                     <div className="banner-image-container">
                         <Image src={Gabriel} className="banner-image shadow" roundedCircle />
                     </div>
-                    <h1 className="banner-title">{title}</h1>
-                    <h4 className="banner-subtitle">{subtitle}</h4>
+                    <h1 className="banner-title">Gabriel de Oliveira Lopes</h1>
+                    <h4 className="banner-subtitle">Fullstack developer</h4>
                     <div style={{marginTop: 20}}>
                         <div className="banner-social-media-container">
                             <a href="https://www.linkedin.com/in/gabriel-de-oliveira-lopes-b97093179/" target="_blank" className="social-link" rel="noopener noreferrer">
@@ -31,7 +30,7 @@ const Banner = ({ dados}) => {
                                 <FontAwesomeIcon icon={faFacebook} size="2x" style={{color: '#4267B2'}} />
                             </a>
                         </div>
-                        <p style={{margin: 0}}>{socialDescription}</p>
+                        <p style={{margin: 0}}>Onde me encontrar</p>
                     </div>
                 </Col>
             </Row>

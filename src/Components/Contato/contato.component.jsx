@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Jumbotron } from 'react-bootstrap';
 import './contato.style.css';
 
 const Contato = (props) =>{
@@ -43,7 +43,13 @@ const Contato = (props) =>{
                     </Form>
                 </Col>
                 <Col md={12} lg={6}>
-                    <h2>Mais informações para contato</h2>
+                    <h3 style={{marginBottom: 30}}>Mais informações para contato</h3>
+                    <Jumbotron>
+                        <h4><b>Telefone</b></h4>
+                        <p>(61) 9 8235-2349</p>
+                        <h4><b>Email</b></h4>
+                        <p>lopesgabriel0199@gmail.com</p>
+                    </Jumbotron>
                 </Col>
             </Row>
         </Container>
